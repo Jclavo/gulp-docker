@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+
+  gulp:
+    image: gulp
+    container_name: my-gulp
+    build: .
+    volumes:
+      - ./app:/usr/app
+
+    command: ash -c "npm install -y && tail -f /dev/null" #  
